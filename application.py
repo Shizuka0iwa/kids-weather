@@ -103,7 +103,7 @@ def login():
             errorMsg = "must provide password"
 
        # create a database connection
-        conn = create_connection(r"/Users/shizuka/CS50/project/sqlite/simpleweather.db")
+        conn = create_connection(r"/Users/shizuka/GitHub/kids-weather/sqlite/simpleweather.db")
         db = conn.cursor()
 
         # Query database for username
@@ -159,7 +159,7 @@ def register():
             return render_template("register.html", errorMsg = errorMsg)
 
         # Create a database connection
-        conn = create_connection(r"/Users/shizuka/CS50/project/sqlite/simpleweather.db")
+        conn = create_connection(r"/Users/shizuka/GitHub/kids-weather/sqlite/simpleweather.db")
         db = conn.cursor()
 
         # Query database for username
@@ -203,7 +203,7 @@ def index():
     time_lag = round(time_lag_sec / (60 * 60))
 
     # Create a database connection
-    conn = create_connection(r"/Users/shizuka/CS50/project/sqlite/simpleweather.db")
+    conn = create_connection(r"/Users/shizuka/GitHub/kids-weather/sqlite/simpleweather.db")
     db = conn.cursor()
 
     # Call for user's setting
@@ -255,7 +255,7 @@ def settings():
     user_id = current_user.id
 
     # create a database connection
-    conn = create_connection(r"/Users/shizuka/CS50/project/sqlite/simpleweather.db")
+    conn = create_connection(r"/Users/shizuka/GitHub/kids-weather/sqlite/simpleweather.db")
     db = conn.cursor()
 
     # Call for user's setting
@@ -310,7 +310,7 @@ def settings():
         user_id = current_user.id
 
         # Create a database connection
-        conn = create_connection(r"/Users/shizuka/CS50/project/sqlite/simpleweather.db")
+        conn = create_connection(r"/Users/shizuka/GitHub/kids-weather/sqlite/simpleweather.db")
         db = conn.cursor()
 
         # Call for user's setting
