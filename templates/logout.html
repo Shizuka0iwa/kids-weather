@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log Out
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <form action="/logout" method="post">
+            <p>You are going to log out!</p>
+            <button class="btn btn-primary btn-logout" type="submit">Log out</button>
+            <a class="btn btn-primary btn-home" href="/" role="button"><i class="fas fa-cloud-sun-rain fa-2x"></i></a>
+        </form>
+    </div>
+{% endblock %}

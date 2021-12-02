@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Settings
+{% endblock %}
+
+{% block main %}
+<h1>Settings</h1>
+
+<form action="/settings" method="post">
+    <div>
+        {% if errorMsg: %}
+        <div class="errorMsg">{{ errorMsg }}</div>
+        {% endif %}
+    </div>
+    <div class="input-group settings setting-area">
+        <span class="input-group-text">Country</span>
+        {% if country == None %}
+            <input class="form-control" id="country" name="country" type="text">
+        {% elif country == 'United States' %}
+            <select class="form-select" id="country" name="country">
+                <option selected value="United States">United States</option>
+                <option value="Canada">Canada</option>
+            </select>
+        {% else %}
+            <select class="form-select" id="country" name="country">
+                <option value="United States">United States</option>
+                <option selected value="Canada">Canada</option>
+            </select>
+        {% endif%}
+        <span class="input-group-text">Zip code</span>
+        {% if zipcode == None %}
+            <input class="form-control" id="zipCode" name="zipCode" type="text">
+        {% else %}
+            <input class="form-control" id="zipCode" name="zipCode" value= {{zipcode}} type="text">
+        {% endif%}
+    </div>
+    <div class="input-group settings setting-hours">
+        <span class="input-group-text">Time to leave home (0-23)</span>
+        {% if from_hour == None %}
+            <input class="form-control" id="from_hour" name="from_hour" type="number">
+        {% else %}
+            <input class="form-control" id="from_hour" name="from_hour" value={{from_hour}} type="number">
+        {% endif%}
+        <span class="input-group-text">Time to return home (0-23)</span>
+        {% if to_hour == None %}
+            <input class="form-control" id="to_hour" name="to_hour" type="number">
+        {% else %}
+            <input class="form-control" id="to_hour" name="to_hour" value={{to_hour}} type="number">
+        {% endif%}
+    </div>
+    <button class="btn btn-primary btn-submit" type="submit">Confirm</button>
+</form>
+
+{% endblock %}

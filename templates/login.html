@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <form action="/login" method="post">
+        <div>
+            {% if errorMsg: %}
+            <div class="errorMsg">{{ errorMsg }}</div>
+            {% endif %}
+        </div>
+        <div class="form-group input-login">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="form-group input-login">
+            <input class="form-control" name="password" placeholder="Password" type="password">
+        </div>
+        <button class="btn btn-primary btn-submit" type="submit">Log In</button>
+    </form>
+{% endblock %}

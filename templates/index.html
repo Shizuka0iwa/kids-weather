@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Weather
+{% endblock %}
+
+{% block main %}
+<h1><i class="fas fa-cloud-sun-rain"></i> {{ weekday }}, {{ month }} {{ date }}</h1>
+<div class="container">
+    <div class="cloth-pics" id="clothes">
+        <h3 class="index-descriptions">What should I wear today?</h3>
+        {% for i in range(clothes_num) %}
+            {% if clothes[i] == 'hat_gloves' %}
+                <img src="/static/images/hat.png" width="150" alt="hat">
+                <img src="/static/images/gloves.png" width="150" alt="gloves">
+            {% endif %}
+            {% if clothes[i] == 'worm_jacket' %}
+                <img src="/static/images/jacket.png" width="150" alt="jacket">
+            {% endif %}
+            {% if clothes[i] == 'light_jacket' %}
+                <img src="/static/images/light-jacket.png" width="150" alt="light-jacket">
+            {% endif %}
+            {% if clothes[i] == 'long' %}
+                <img src="/static/images/long-t-shirt.png" width="150" alt="hat">
+                <img src="/static/images/pants.png" width="150" alt="gloves">
+            {% endif %}
+            {% if clothes[i] == 'short' %}
+                <img src="/static/images/short-t-shirt.png" width="150" alt="hat">
+                <img src="/static/images/shorts.png" width="150" alt="gloves">
+            {% endif %}
+            {% if clothes[i] == 'snowboots' %}
+                <img src="/static/images/boots.png" width="150" alt="hat">
+            {% endif %}
+            {% if clothes[i] == 'umbrella' %}
+                <img src="/static/images/umbrella.png" width="150" alt="hat">
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+<div class="container">
+    <div id="weathers">
+        <h3 class="index-descriptions">How's the weather?</h3>
+        <table class="table-main">
+            <tr>
+                <td>{{ weather1 }}</td>
+                <td>{{ weather2 }}</td>
+                <td>{{ weather3 }}</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="weather-pic">
+                        {% if weather[0] == 'sun' %}
+                            <i class="fas fa-sun fa-6x"></i>
+                        {% elif weather[0] == 'cloud-sun' %}
+                            <i class="fas fa-cloud-sun fa-6x"></i>
+                        {% elif weather[0] == 'cloud' %}
+                            <i class="fas fa-cloud fa-6x"></i>
+                        {% elif weather[0] == 'cloud-rain' %}
+                            <i class="fas fa-cloud-rain fa-6x"></i>
+                        {% elif weather[0] == 'cloud-showers-heavy' %}
+                            <i class="fas fa-cloud-showers-heavy fa-6x"></i>
+                        {% elif weather[0] == 'snowflake' %}
+                            <i class="fas fa-snowflake fa-6x"></i>
+                        {% elif weather[0] == 'smog' %}
+                            <i class="fas fa-smog fa-6x"></i>
+                        {% elif weather[0] == 'wind' %}
+                            <i class="fas fa-wind fa-6x"></i>
+                        {% elif weather[0] == 'bolt' %}
+                            <i class="fas fa-bolt fa-6x"></i> 
+                        {% elif weather[0] == 'meteor' %}
+                            <i class="fas fa-meteor fa-6x"></i>
+                        {% endif %}
+                    </span>
+                </td>
+                <td>
+                    <span class="weather-pic">
+                        {% if weather[1] == 'sun' %}
+                            <i class="fas fa-sun fa-6x"></i>
+                        {% elif weather[1] == 'cloud-sun' %}
+                            <i class="fas fa-cloud-sun fa-6x"></i>
+                        {% elif weather[1] == 'cloud' %}
+                            <i class="fas fa-cloud fa-6x"></i>
+                        {% elif weather[1] == 'cloud-rain' %}
+                            <i class="fas fa-cloud-rain fa-6x"></i>
+                        {% elif weather[1] == 'cloud-showers-heavy' %}
+                            <i class="fas fa-cloud-showers-heavy fa-6x weather-pic"></i>
+                        {% elif weather[1] == 'snowflake' %}
+                            <i class="fas fa-snowflake fa-6x"></i>
+                        {% elif weather[1] == 'smog' %}
+                            <i class="fas fa-smog fa-6x"></i>
+                        {% elif weather[1] == 'wind' %}
+                            <i class="fas fa-wind fa-6x"></i>
+                        {% elif weather[1] == 'bolt' %}
+                            <i class="fas fa-bolt fa-6x"></i> 
+                        {% elif weather[1] == 'meteor' %}
+                            <i class="fas fa-meteor fa-6x"></i>
+                        {% endif %}
+                    </span>
+                </td>
+                <td>
+                    <span class="weather-pic">
+                        {% if weather[2] == 'sun' %}
+                            <i class="fas fa-sun fa-6x"></i>
+                        {% elif weather[2] == 'cloud-sun' %}
+                            <i class="fas fa-cloud-sun fa-6x"></i>
+                        {% elif weather[2] == 'cloud' %}
+                            <i class="fas fa-cloud fa-6x"></i>
+                        {% elif weather[2] == 'cloud-rain' %}
+                            <i class="fas fa-cloud-rain fa-6x"></i>
+                        {% elif weather[2] == 'cloud-showers-heavy' %}
+                            <i class="fas fa-cloud-showers-heavy fa-6x"></i>
+                        {% elif weather[2] == 'snowflake' %}
+                            <i class="fas fa-snowflake fa-6x"></i>
+                        {% elif weather[2] == 'smog' %}
+                            <i class="fas fa-smog fa-6x"></i>
+                        {% elif weather[2] == 'wind' %}
+                            <i class="fas fa-wind fa-6x"></i>
+                        {% elif weather[2] == 'bolt' %}
+                            <i class="fas fa-bolt fa-6x"></i> 
+                        {% elif weather[2] == 'meteor' %}
+                            <i class="fas fa-meteor fa-6x"></i>
+                        {% endif %}
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+{% endblock %}

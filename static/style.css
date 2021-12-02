@@ -1,0 +1,106 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  padding-top: 6rem;
+}
+
+h1 {
+  margin-left: 1rem;
+  color: #3398c5;
+}
+
+footer {
+  padding-top: 2rem;
+}
+
+.table-main {
+  padding: 2rem;
+}
+
+.navbar {
+  background-color: #3398c5;
+}
+.container {
+  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.cloth-pics {
+  padding: 1rem;
+  border-radius: 10px;
+  display:inline-block
+}
+
+.index-descriptions {
+  padding: 0.5rem;
+  color: #3398c5;
+}
+
+.table-attribution {
+  width: 500px;
+  color: #7b7a7c;
+  margin-top: 2rem;
+  text-align: left; !important
+}
+
+.attribution {
+  padding: 1rem;
+}
+
+.weather-pic {
+  padding: 1rem;
+}
+
+.settings {
+  padding: 1rem;
+}
+
+.btn-submit {
+  margin-left: 1rem;
+  background: #3398c5;
+  border-color: #3398c5;
+}
+
+.btn-home {
+  margin-left: 1rem;
+  background: #a5acac;
+  border-color: #a5acac;
+  height: 3rem;
+  width: 8rem;
+}
+
+.btn-logout {
+  margin-left: 1rem;
+  background: #3398c5;
+  border-color: #3398c5;
+  height: 3rem;
+  width: 8rem;
+}
+
+.input-register {
+  padding: 1rem;
+}
+
+.input-login {
+  padding: 1rem;
+}
+
+.errorMsg {
+  color: red;
+  width: 100%;
+  padding: 1rem;
+}
+
+#clothes {
+  background: #ebfbfb;
+}
+
+#weathers {
+  background: #ebfbfb;
+  padding: 1rem;
+  border-radius: 10px;
+}
