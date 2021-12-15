@@ -8,7 +8,7 @@ Kids Weather is a simple weather forecast with icons for little kids who don't r
 With this app, children can find out the weather and proper clothing for the day.
 We don't have to tell them what to wear every morning anymore.
 
-# Fearures
+# Features
 ## No texts
 It shows weather forecast only with images. Your kids don't need to read any words. Three images tell them the weather in the morning, noon, and evening.
 
